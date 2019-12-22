@@ -1,0 +1,21 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+.copyright {
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: #333;
+    color: #fff;
+    font-family: Arial;
+    font-size: 12px;
+    letter-spacing: 1px;
+}

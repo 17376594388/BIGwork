@@ -1,0 +1,99 @@
+.collect-list {
+    margin: auto;
+    max-width: 580px;
+    max-height: font-family: Helvetica, Arial, sans-serif;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.collect-list li {
+    padding: 12px 24px;
+    border-bottom: 1px solid #ddd;
+}
+
+.float-left {
+    width: 36px;
+    text-align: center;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    background: #BDFCC9;
+    border-radius: 5px;
+    padding: 3px 5px;
+}
+
+.layui-btn {
+    border-width: 0px;
+    background: #FFFFFF;
+    max-width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.float-right {
+    width: 36px;
+    text-align: center;
+    float: right;
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 3px 5px;
+}
+
+input[type=submit] {
+    font-family: inherit;
+}
+
+input[type=text] {
+    border: 1px solid #ddd;
+}
+
+input[name=subid] {
+    width: 50px;
+    height: 30px;
+    size: 20px;
+}
+
+input[name=subcontent] {
+    width: 300px;
+    height: 30px;
+    size: 20px;
+}
+
+.delete {
+    font-size: 12px;
+    padding: 3px 5px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 1px solid #555555;
+    border-radius: 5px;
+}
+
+.delete:hover {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+
+#search {
+    text-align: center;
+}
+
+#collect-list {
+    height: 95%;
+}
+
+#layerDemo {
+    margin-bottom: 0;
+}

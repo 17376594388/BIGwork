@@ -1,0 +1,110 @@
+p {
+	font-size: 16px;
+}
+
+.list {
+	height: 95%;
+	width: 20%;
+	border: 1px solid black;
+	margin-left: 5%;
+	overflow: scroll;
+	display: inline-block;
+}
+
+.donediv {
+	border: 1px solid black;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	float: left;
+	margin: 10px;
+	background-color: #90EE90;
+}
+
+.notdonediv {
+	border: 1px solid black;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	float: left;
+	margin: 10px;
+}
+
+.ischeckeda {
+	color: #0000ff;
+	display: block;
+	padding: 2px 10px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.notcheckeda {
+	color: black;
+	display: block;
+	padding: 2px 10px;
+}
+
+.separate {
+	width: 2px;
+	height: 95%;
+	background-color: #000;
+	margin-left: 2%;
+	margin-right: 3%;
+	display: inline-block;
+}
+
+.sub {
+	height: 95%;
+	width: 65%;
+	border: 1px solid black;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.prev {
+	float: left;
+	margin: 10px;
+	padding: 0px;
+}
+
+.next {
+	float: right;
+	margin: 10px;
+	padding: 0px;
+}
+
+.txta {
+	color: #fff;
+	display: block;
+	padding: 8px 10px;
+}
+
+.collectbt {
+	margin-top: 10px;
+	text-align: center;
+}
+
+.collecttip {
+	margin-top: 10px;
+	text-align: center;
+	display: none;
+}
+
+.subject {
+	width: 60%;
+	height: 50%;
+	margin: 0 auto;
+	margin-top: 10%;
+	word-wrap: break-word;
+}
+
+.answerbt {
+	margin-top: 10px;
+	display: none;
+}
+
+.answerandreason {
+	display: none;
+}

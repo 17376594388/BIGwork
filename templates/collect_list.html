@@ -1,0 +1,32 @@
+ {% extends 'base2.html' %} 
+ {% block content %}
+<div id="collect-list">
+ <form method="post" action='/search' id="search">
+    题目ID <input type="text" name="subid" autocomplete="off">
+    关键字 <input type="text" name="subcontent" autocomplete="off">
+    <input class="btn-success" type="submit" name="submit" value="搜索">
+ </form>
+
+ <div class="site-demo-button" id="layerDemo" >
+  <ul class="collect-list">
+    {% for i in subid_list %}
+      <li>
+        <span class="float-left">{{ i }}</span> --------
+        <button data-method="offset" data-type="auto" data-id={{i}} class="layui-btn layui-btn-normal">{{ subject[i] }}
+        </button>
+        <span class="float-right"><button  data-method="offset" data-type="auto" data-id={{i}} class="btn delete">删除</button>
+        </span>
+      </li>
+    {% endfor %}  
+    {% if subid_list %}
+    {% else %}
+        <li>
+        <span class="float-left">？？</span> --------
+        <button data-method="offset" data-type="auto"  class="layui-btn layui-btn-normal">无记录
+        </button>
+      </li>
+    {% endif %}  
+  </ul>
+ </div>
+</div>
+ {% endblock %}

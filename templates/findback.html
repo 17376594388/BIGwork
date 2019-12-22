@@ -1,0 +1,35 @@
+ {% extends 'base1.html' %}
+
+{% block content %}
+<h2>找回密码</h2>
+<form action="/findback" method="post" role="form"> 
+  
+   <div class="input-group input-group-md"> 
+    <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span> 
+    <input type="text" class="form-control" id="fb_username" name="username" placeholder="请输入注册时的邮箱" /> 
+   </div> 
+
+   <div class="input-group input-group-md"> 
+    <input type="text"  class="form-control" name="checknum" id="fb_checknum" placeholder="请输入验证码" />
+	<span class="input-group-btn"><button type="button" id="sendfb"class="btn btn-default btn-block">获取验证码</button></span>
+   </div>
+
+   <div class="input-group input-group-md"> 
+    <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-lock"></i></span> 
+    <input type="password" class="form-control" name="userpwd" id="fb_userpwd" placeholder="请输入新密码" onkeyup="value=value.replace(/[\u4e00-\u9fa5]/ig,'')" /> 
+   </div> 
+
+   <div class="input-group input-group-md"> 
+    <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-lock"></i></span> 
+    <input type="password" class="form-control" name="userpwdagain" id="fb_userpwdagain" placeholder="请再次输入密码" onkeyup="value=value.replace(/[\u4e00-\u9fa5]/ig,'')" /> 
+   </div> 
+
+   <br/> 
+   <a href="/login" style="margin-right: 160px;">返回登录</a> 
+   <a href="/signup">注册</a> 
+   <br/> 
+   <button type="Submit" id="findback" class="btn btn-success btn-block">找回密码</button> 
+   <p id="tip3"></p> 
+  </form>  
+
+{% endblock %}

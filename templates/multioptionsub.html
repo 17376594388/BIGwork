@@ -1,0 +1,91 @@
+ {% extends 'base2.html' %}
+
+{% block content %}
+
+<div class="list" >
+	{% for count in counts %}
+	{% if (count+2000) in donesubid %}
+	{% if count == subject.ID-2000 %}
+	<div class="donediv"><a href="/multioption_sub/{{count+2000}}" class="ischeckeda">{{count}}</a></div>
+	{% else %}
+	<div class="donediv"><a href="/multioption_sub/{{count+2000}}" class="notcheckeda">{{count}}</a></div>
+	{% endif %}
+	{% else %}
+	{% if count == subject.ID-2000 %}
+	<div class="notdonediv"><a href="/multioption_sub/{{count+2000}}" class="ischeckeda">{{count}}</a></div>
+	{% else %}
+	<div class="notdonediv"><a href="/multioption_sub/{{count+2000}}" class="notcheckeda">{{count}}</a></div>
+	{% endif %}
+	{% endif %}
+	{% endfor %}
+</div>
+
+<div class="separate" ></div>
+
+<div class="sub">
+	<button class="btn btn-success prev" ><a href="/multioption_sub/{{subject.ID-1}}" class="txta">上一题</a></button>
+	<button class="btn btn-success next" ><a href="/multioption_sub/{{subject.ID+1}}" class="txta">下一题</a></button>
+	<div class="collectbt"><button id="collect"class="btn btn-info">收藏题目</button></div>
+	<div id="disappare" class="collecttip"><h4 id="collect_tip"></h4></div>
+
+	<div class="subject" >
+	<form >
+		<center><h5 id="judge"></h5></center>
+		<p >{{subject.text}}</p>
+		{% if "A" in oldans %}
+	<label class="checkbox">
+      <input type="checkbox" name="ans" value="A" checked> A.{{subject.ansA}}
+   </label>
+   		{% else %}
+   		<label class="checkbox"> 
+   			<input type="checkbox" name="ans" value="A" > A.{{subject.ansA}}
+   		</label>
+   {% endif %}
+   {% if "B" in oldans %}
+   <label class="checkbox">
+      <input type="checkbox" name="ans"  value="B" checked> B.{{subject.ansB}}
+   </label>
+	{% else %}
+	<label class="checkbox">
+      <input type="checkbox" name="ans"  value="B"> B.{{subject.ansB}}
+   </label>
+   {% endif %}
+   {% if "C" in oldans %}
+   <label class="checkbox">
+      <input type="checkbox" name="ans" value="C" checked> C.{{subject.ansC}}
+   </label>
+   {% else %}
+    <label class="checkbox">
+      <input type="checkbox" name="ans" value="C"> C.{{subject.ansC}}
+   </label>
+	 {% endif %}
+	{% if "D" in oldans %}
+   <label class="checkbox">
+      <input type="checkbox" name="ans" value="D" checked> D.{{subject.ansD}}
+   </label>
+{% else %}
+ <label class="checkbox">
+      <input type="checkbox" name="ans" value="D"> D.{{subject.ansD}}
+   </label>
+   {% endif %}
+   {% if subject.ansE %}
+   	{% if "E" in oldans %}
+   <label class="checkbox">
+      <input type="checkbox" name="ans" value="E" checked> E.{{subject.ansE}}
+   </label>
+{% else %}
+ <label class="checkbox">
+      <input type="checkbox" name="ans" value="E"> E.{{subject.ansE}}
+   </label>
+   {% endif %}
+   {% endif %}
+   <center><button type="button" id="multi_sbm" class="btn btn-success ">确定</button></center>
+	</form>
+	<button id="checkans" class="btn btn-info btn-block answerbt" >查看答案</button>
+	<label class="answerandreason" >{{subject.ans}},</label>
+	<label class="answerandreason">解释原因:{{subject.reason}}</label>
+</div>
+
+</div>
+
+{% endblock %}

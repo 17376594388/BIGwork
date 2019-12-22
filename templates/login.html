@@ -1,0 +1,23 @@
+ {% extends 'base1.html' %} 
+ {% block content %} 
+  <h2>欢迎登录</h2> 
+  <form action="/login" method="post" role="form"> 
+
+   <div class="input-group input-group-md"> 
+    <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span> 
+    <input type="text" class="form-control" name="username" id="lg_username" placeholder="请输入用户名" onkeyup="value=value.replace(/[\u4e00-\u9fa5]/ig,'')"/> 
+   </div> 
+
+   <div class="input-group input-group-md"> 
+    <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-lock"></i></span> 
+    <input type="password" class="form-control" name="userpwd" id="lg_userpwd" placeholder="请输入密码" onkeyup="value=value.replace(/[\u4e00-\u9fa5]/ig,'')" /> 
+   </div> 
+   
+   <br/> 
+   <a href="/signup" style="margin-right: 160px;">注册</a> 
+   <a href="/findback">找回密码</a> 
+   <br/> 
+   <button type="Submit" id="login" class="btn btn-success btn-block">登录</button>
+   <p style="color:red" id="tip"></p> 
+  </form> 
+ {% endblock %}
